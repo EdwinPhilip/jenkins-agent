@@ -1,0 +1,6 @@
+#! /bin/sh
+
+sudo cp jenkins_slave.service /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable jenkins_slave.service
+sudo systemctl start jenkins_slave.service

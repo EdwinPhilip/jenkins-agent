@@ -1,0 +1,13 @@
+
+[UNIT]
+Description=Jenkins slave start
+After=network.target auditd.service
+
+[Service]
+ExecStart=/home/student/jenkins-agent/start-agent
+KillMode=mixed
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+Alias=jenkins_node.service
